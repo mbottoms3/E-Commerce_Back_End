@@ -15,6 +15,7 @@ foreignKey: 'category_id',
 onDelete: 'CASCADE',
 });
 
+// MANY TO MANY
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   through: {
@@ -24,6 +25,7 @@ Product.belongsToMany(Tag, {
   as: 'products'
 });
 
+// MANY TO MANY
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
